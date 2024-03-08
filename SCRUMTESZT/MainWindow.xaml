@@ -13,25 +13,49 @@
         <Label Content="E-mail címed" HorizontalAlignment="Left" Height="29" Margin="23,100,0,0" VerticalAlignment="Top" Width="78"/>
         <TextBox x:Name="txbMail" HorizontalAlignment="Left" Margin="124,106,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="148" Background="#FFDEDEDE"/>
         <Label Content="1. Ki a Scrum csapat vezetője?" HorizontalAlignment="Left" Margin="23,140,0,0" VerticalAlignment="Top"/>
-        <ListBox HorizontalAlignment="Left" Height="86" Margin="35,171,0,0" VerticalAlignment="Top" Width="163">
+        <ListBox x:Name="listboxVezeto" HorizontalAlignment="Left" Height="86" Margin="35,171,0,0" VerticalAlignment="Top" Width="163">
             <ListBoxItem>Product owner</ListBoxItem>
             <ListBoxItem>Scrum master</ListBoxItem>
             <ListBoxItem>Developer</ListBoxItem>
             <ListBoxItem>Mekk mester</ListBoxItem>
         </ListBox>
         <Label Content="2. Milyen módszertan a Scrum módszertan?" HorizontalAlignment="Left" Margin="23,271,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="cnb2f" HorizontalAlignment="Left" Margin="35,302,0,0" VerticalAlignment="Top" Width="177">
+        <ComboBox x:Name="comboboxModszertanok" HorizontalAlignment="Left" Margin="35,302,0,0" VerticalAlignment="Top" Width="177">
             <ComboBoxItem>Agilis</ComboBoxItem>
             <ComboBoxItem>Hagyományos</ComboBoxItem>
             <ComboBoxItem>Rossz</ComboBoxItem>
         </ComboBox>
         <Label Content="3. Milyen eseményeket ismersz a Scrum-ban?" HorizontalAlignment="Left" Margin="23,340,0,0" VerticalAlignment="Top"/>
-        <StackPanel HorizontalAlignment="Left" Height="63" Margin="62,381,0,0" VerticalAlignment="Top" Width="177">
+        <StackPanel x:Name="stackpanelEsemenyek" HorizontalAlignment="Left" Height="63" Margin="62,381,0,0" VerticalAlignment="Top" Width="177">
             <CheckBox Content="Sprint Planning Meeting"/>
             <CheckBox Content="Daily Conversion"/>
             <CheckBox Content="Sprint Retrospective"/>
             <CheckBox Content="Backlog Grooming"/>
         </StackPanel>
+        <ListBox x:Name="ComboboxEsemenyekOutput" Margin="868,214,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="196" Height="110"/>
+        <Label HorizontalAlignment="Left" Margin="868,47,0,0" VerticalAlignment="Top" Width="120" Height="26" Content="Válaszok"/>
+        <Label HorizontalAlignment="Left" Margin="782,85,0,0" Content="1. feladat" VerticalAlignment="Top" Width="81"/>
+
+        <Label HorizontalAlignment="Left" Margin="782,140,0,0" Content="2. feladat" VerticalAlignment="Top" Width="81"/>
+        <TextBlock HorizontalAlignment="Left" Margin="407,76,0,0" TextWrapping="Wrap" Text="Ez a teszt arra szolgál, hogy felmérje a tudásodat a Scrum módszertannal kapcsolatban. Amennyiben a teszt eredménye sikeres, veregesd meg a bal vállad a jobb kezeddel. Amennyiben nem sikeres a teszt, itt az ideje tanulni, mert nemsokára számonkérés következik a fenti módszertan anyagából." VerticalAlignment="Top" Width="316" TextAlignment="Justify" Height="99"/>
+        <Label HorizontalAlignment="Left" Margin="782,196,0,0" Content="3. feladat" VerticalAlignment="Top" Width="81"/>
+        <Label HorizontalAlignment="Left" Margin="782,340,0,0" Content="4. feladat" VerticalAlignment="Top" Width="81"/>
+        <Label HorizontalAlignment="Left" Margin="782,426,0,0" Content="5. feladat" VerticalAlignment="Top" Width="81"/>
+        <Label Content="2. Milyen módszertan a Scrum módszertan?" HorizontalAlignment="Left" Margin="23,271,0,0" VerticalAlignment="Top"/>
+        <Label Content="4. Milyen dokumentumokat ismersz a Scrum-ban?" HorizontalAlignment="Left" Margin="407,214,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="radio1" Content="Product Backlog" HorizontalAlignment="Left" Margin="407,255,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="radio2" Content="Sprint Retrospective" HorizontalAlignment="Left" Margin="407,276,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="radio3" Content="Daily Scrum" HorizontalAlignment="Left" Margin="407,296,0,0" VerticalAlignment="Top"/>
+        <Label Content="5. Milyen típusú módszertan a Scrum?" HorizontalAlignment="Left" Margin="412,322,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textboxModszertan" HorizontalAlignment="Left" Margin="407,362,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="269"/>
+        <Button x:Name="btnMain" Content="KÉSZ" HorizontalAlignment="Left" Margin="469,399,0,0" VerticalAlignment="Top" Width="144" Height="40" Click="btnMain_Click"/>
+        <Label HorizontalAlignment="Left" Margin="868,108,0,0" VerticalAlignment="Top" Width="196" Height="23" Content="" Background="#FF899FE6"/>
+        <Label x:Name="labelScrumVezetoOutput" HorizontalAlignment="Left" Margin="868,108,0,0" VerticalAlignment="Top" Width="196" Height="23" Content="" Background="#FF899FE6"/>
+        <Label x:Name="labelModszertanOutput" HorizontalAlignment="Left" Margin="868,157,0,0" VerticalAlignment="Top" Width="196" Height="23" Content="" Background="#FF899FE6"/>
+        <Label x:Name="labelDokumentumOutput" HorizontalAlignment="Left" Margin="868,363,0,0" VerticalAlignment="Top" Width="196" Height="23" Content="" Background="#FF899FE6"/>
+        <Label x:Name="labelMilyenTipusuOutput" HorizontalAlignment="Left" Margin="868,439,0,0" VerticalAlignment="Top" Width="196" Height="23" Content="" Background="#FF899FE6"/>
+        <Label x:Name="lblError" Content="Hiba! Nem választottál ki semmit" HorizontalAlignment="Left" Margin="868,185,0,0" VerticalAlignment="Top" Foreground="#FFF10000" FontWeight="Bold" Visibility="Collapsed"/>
+
 
 
     </Grid>
